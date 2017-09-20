@@ -15,6 +15,7 @@ import { RepoDetailComponent } from './github/repo-detail/repo-detail.component'
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { ContactComponent } from './contact/contact.component';
 import {DataService} from "./services/DataService";
+import {OrderByPipe} from "./home/orderBy"
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import {DataService} from "./services/DataService";
     RepoListComponent,
     RepoDetailComponent,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    OrderByPipe
   ],
   imports: [
     BrowserModule,

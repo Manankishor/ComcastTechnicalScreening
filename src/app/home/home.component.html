@@ -1,18 +1,21 @@
 <h1>Display and Sort Json Data</h1>
 
-<table class="table table-striped col-md-2">
+<!-- Table bootstrap classes -->
+<table class="table table-striped col-md-3">
   <thead class="thead-inverse">
   <tr class="tableHeader">
-    <th>name</th>
-    <th>category</th>
-    <th>amount</th>
+    <th (click)="filterBy('name')">name</th>
+    <th (click)="filterBy('category')">category</th>
+    <th (click)="filterBy('amount')">amount</th>
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor = "let data of dataset">
+  <!-- Apply 'orderBy' column -->
+  <tr *ngFor = "let data of dataset | orderBy: {column: column, direction: direction}">
     <td>{{data.name}}</td>
     <td>{{data.category}}</td>
     <td>{{data.amount}}</td>
   </tr>
   </tbody>
 </table>
+

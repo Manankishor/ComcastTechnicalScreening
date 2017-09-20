@@ -9,7 +9,9 @@ import {DataService} from "../services/DataService"
 //Displaying JSON data and filtering with name, category and amount
 export class HomeComponent {
   dataset: Array<any>;
-
+  isOrder: boolean = false;
+  column: string = 'name';
+  direction: number;
 
   constructor(private DataService: DataService) {
 
@@ -22,5 +24,11 @@ export class HomeComponent {
     })
   }
 
-
+  //sorting data with name
+  filterBy(column:string){
+    console.log(column);
+    this.isOrder = !this.isOrder;
+    this.column = column;
+    this.direction = this.isOrder ? -1 : 1;
+  };
 }
