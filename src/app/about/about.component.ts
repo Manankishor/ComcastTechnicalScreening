@@ -39,7 +39,7 @@ export class AboutComponent implements OnInit{
   }
   //Passing Name as argument to sorting function to get sorted according to value passed
   sorting(column:string){
-    this.isOrder = !this.isOrder; //ASCENDING or DESCENDING 
+    this.isOrder = !this.isOrder; //ASCENDING or DESCENDING
     this.column = column;
     this.direction = this.isOrder ? -1 : 1;
   };
